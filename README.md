@@ -1,4 +1,4 @@
-# Fabrica de Software - Desafio
+# Fabrica de Software - Desafio Técnico
 
 Seja bem vindo ao desafio da Fabrica de Software para avaliar seus conhecimentos em desenvolvimento de software (backend e frontend), consumo de API e conhecimentos gerais em desenvolvimento de software.
 
