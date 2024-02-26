@@ -4,7 +4,7 @@ Seja bem vindo ao desafio da Fabrica de Software para avaliar seus conhecimentos
 
 ## Desafio
 
-Você deverá criar uma aplicação web que consuma a API do [The Movie Database](https://www.themoviedb.org/documentation/api) e exiba os filmes mais populares. A aplicação deverá conter uma página inicial com a listagem dos filmes e uma página de detalhes do filme. A listagem de filmes deverá conter a imagem do filme, o título e a popularidade. A página de detalhes do filme deverá conter a imagem do filme, o título, a popularidade, a sinopse e a data de lançamento. 
+Você deverá criar uma aplicação web que consuma a API do [The Movie Database](https://www.themoviedb.org/documentation/api) e exiba os filmes mais populares. A aplicação deverá conter uma página inicial com a listagem dos **filmes populares** e uma página de detalhes do filme. A listagem de filmes deverá conter a imagem do filme, o título e a popularidade. A página de detalhes do filme deverá conter a imagem do filme, o título, a popularidade, a sinopse e a data de lançamento. 
 
 Bônus: A aplicação deverá ser responsiva e deverá conter um campo de busca para que o usuário possa buscar por um filme específico.
 
