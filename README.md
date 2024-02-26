@@ -1,6 +1,6 @@
 # Fabrica de Software - Desafio
 
-Seja bem vindo ao desafio da Fabrica de Software para avaliar seus conhecimentos em desenvolvimento de software. Esse desafio pretende avaliar suas habilidades em desenvolvimento web (backend e frontend), consumo de API e conhecimentos gerais em desenvolvimento de software.
+Seja bem vindo ao desafio da Fabrica de Software para avaliar seus conhecimentos em desenvolvimento de software (backend e frontend), consumo de API e conhecimentos gerais em desenvolvimento de software.
 
 ## Desafio
 
@@ -12,14 +12,13 @@ Bônus: A aplicação deverá ser responsiva e deverá conter um campo de busca 
 
 - Frontend: ReactJS ou VueJS
 - Backend: NodeJS ou Python/Django
-- Banco de Dados: SQLite, MySQL ou PostgreSQL
 - Biblioteca de estilos: TailwindCSS, Bootstrap, Vuetify ou outra similar.
 - Utilização de boas práticas de desenvolvimento de software.
-- A aplicação deverá conter um README.md com as instruções para rodar a aplicação.
+- Atualizar esse README.md com as instruções para rodar a aplicação.
 
 ## Instruções
 
-- Faça um fork desse repositório.
+- Faça um fork desse repositório e crie uma branch com o seu nome.
 - Após finalizar o desafio, crie um pull request para o repositório original.
 - Envie um e-mail para [fabricio.bizotto@ifc.edu.br](mailto:fabricio.bizotto@ifc.edu.br) com o link do seu pull request.
 
