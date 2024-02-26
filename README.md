@@ -24,7 +24,7 @@ Bônus: A aplicação deverá ser responsiva e deverá conter um campo de busca 
 
 ## Entrega
 
-- O prazo para entrega do desafio é **08/03/2024**.
+- O prazo para entrega do desafio é **10/03/2024**.
 
 ## Dúvidas
 
