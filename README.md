@@ -10,7 +10,7 @@ Bônus: A aplicação deverá ser responsiva e deverá conter um campo de busca 
 
 ## Requisitos
 
-- Frontend: ReactJS, VueJS ou outro framework similar.
+- Frontend: NextJS/ReactJS, VueJS ou outro framework similar.
 - Backend: NodeJS, Python/Django ou outro framework similar.
 - Biblioteca de estilos: TailwindCSS, Bootstrap, Vuetify ou outra similar.
 - Utilização de boas práticas de desenvolvimento de software.
