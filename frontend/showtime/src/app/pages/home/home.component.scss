@@ -1,0 +1,48 @@
+.carousel-inner
+{
+    height: 700px;
+}
+
+.carousel-inner .carousel-item img
+{
+    height: 700px;
+    object-fit: cover;
+}
+
+.carousel-caption h2
+{
+    color: #E50914;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.carousel-caption p 
+{
+    color: #ffffff;
+}
+
+.rowposter {
+    display: flex;
+    overflow-x: scroll; /* Adiciona a capacidade de rolar horizontalmente */
+    overflow-y: hidden; /* Oculta a barra de rolagem vertical */
+  }
+  
+  .rowimg {
+    flex: 0 0 auto; /* Define o tamanho da imagem para não se expandir */
+    max-height: 300px;
+    object-fit: contain;
+    width: auto; /* Largura automática para manter a proporção da imagem */
+    margin-right: 7px;
+    scroll-snap-align: start; /* Faz com que cada imagem se encaixe no início do contêiner */
+    transition: transform 450ms;
+  }
+  
+  .rowimg:hover {
+    transform: scale(1.09);
+    cursor: pointer;
+  }
+  
+  /* Oculta a barra de rolagem em navegadores específicos */
+  .rowposter::-webkit-scrollbar {
+    display: none;
+  }
