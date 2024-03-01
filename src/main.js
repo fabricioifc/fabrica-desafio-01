@@ -1,3 +1,11 @@
+//setting vars
+const { readFile } = require(`fs`);
+var http = require(`http`);
+const port = 3729;
+const ip = `localhost`;
+var pageTitle = `loading`;
+var pageTemplate = 
+`
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,7 +24,31 @@
         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
-
     <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+`
+
+//create server
+http.createServer(
+    function page(req, res){
+        if (req.url == `/home`) {
+            //title
+            var pageTitle = `home`;
+            //page
+            res.writeHead(200, {'Content-Type': 'text/html'});
+            //render file
+            res.write(pageTemplate);
+            //send
+            res.end();
+
+        }else{
+            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.write('not found');
+            res.end();
+        }
+    }
+).listen(port, ip);
+
+//print out the HREF
+console.log(`Server running...\nhttp://${ip}:${port}`);
