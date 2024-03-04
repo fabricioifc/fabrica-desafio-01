@@ -1,62 +1,120 @@
-import React, {useEffect, useState} from 'react';
+import React, {/*useEffect, useState,*/ Component} from 'react';
 import './App.css';
-function App() 
-{
-  const [backendData, setBackendData] = useState([{}])
 
-  useEffect( 
-    ()=> {
-      fetch("/api").then(
-        Response => Response.json()
-      ).then(
-        data => {
-          setBackendData(data)
-        }
-      )
-    }, [])
-
-  return (
-    <div>
-        {(typeof backendData.users === 'undefined') ? (
-            <p>Loading...</p>
-          ): (
-            backendData.users.map((user, i) =>(
-              <p key={i} className='p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3'>{user}</p>
-            ))
-          )
-        }
+const App = () =>{
+  return(
+    <div className='App'>
+      <Header/>
+      <Content/>
+      <Footer/>
     </div>
   )
 }
 
-function header() 
+class Header extends Component
 {
-  return (
-      `<div class="dropdown-menu">
-    <form class="px-4 py-3">
-      <div class="mb-3">
-        <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-      </div>
-      <div class="mb-3">
-        <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-      </div>
-      <div class="mb-3">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="dropdownCheck">
-          <label class="form-check-label" for="dropdownCheck">
-            Remember me
-          </label>
+  render()
+  {
+    return (
+      <header>
+        <nav className="navbar bg-info">
+          <div className="container-fluid col-10">
+            <a href='#' className="navbar-brand">Navbar</a>
+            <form className="d-flex" role="search">
+              <input name="search" type="search" className="form-control me-2" placeholder="Search" aria-label="Search"/>
+              <button className="btn btn-outline-light" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </header>
+    )
+  }
+};
+
+class Content extends Component
+{
+  generateCard(props) 
+  {
+    return(
+      <a href="#" className="card" style={{width: "18rem"}}>
+        <img src="{props.img}" className="card-img-top" alt='img'/>
+        <div className="card-body">
+          <h5 className="card-title">{props.name}</h5>
+          <p className="card-text">{props.popularity}/10</p>
         </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Sign in</button>
-    </form>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">New around here? Sign up</a>
-    <a class="dropdown-item" href="#">Forgot password?</a>
-  </div>`
-  ); 
+      </a>
+    )
+  }
+
+  generateCards(props)
+  {
+    let grup = []
+    for (let i = 0; i < 10; i++) 
+    {
+      grup.push(
+        <a href="#" className="card m-3" style={{width: "18rem"}}>
+        <img src="{props.img}" className="card-img-top" alt='img'/>
+        <div className="card-body">
+          <h5 className="card-title">{props.name}</h5>
+          <p className="card-text">{props.popularity}/10</p>
+        </div>
+      </a>
+        )
+    }
+    return grup
+  }
+
+  render()
+  {
+    return (
+      <main className="d-flex flex-wrap justify-content-between align-items-start container-fluid col-11 m-5" style={{minHeight: "75vh"}}>
+        <>
+          <this.generateCards  name={'same name'} popularity={'5'} img={''}/>
+        </>
+      </main>
+    )
+  }
 }
 
-export default App
+class Footer extends Component
+{
+  render()
+  {
+    return (
+      <footer className="p-5 bg-primary">
+      </footer>
+    )
+  }
+}
+
+export default App;
+
+
+// function App() 
+// {
+//   const [backendData, setBackendData] = useState([{}])
+
+//   useEffect( 
+//     ()=> {
+//       fetch("/api").then(
+//         Response => Response.json()
+//       ).then(
+//         data => {
+//           setBackendData(data)
+//         }
+//       )
+//     }, [])
+
+//     return (
+//       <div>
+//       {(typeof backendData.users === 'undefined') ? (
+//           <p>Loading...</p>
+//         ): (
+//           backendData.users.map((user, i) =>(
+//             <p key={i} className='p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3'>{user}</p>
+//           ))
+//         )
+//       }
+//     </div>
+//     ); 
+// }
