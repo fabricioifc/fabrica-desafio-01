@@ -1,32 +1,20 @@
 # Fabrica de Software - Desafio Técnico
 
-Seja bem vindo ao desafio da Fabrica de Software para avaliar seus conhecimentos em desenvolvimento de software (backend e frontend), consumo de API e conhecimentos gerais em desenvolvimento de software.
+## Como rodar a aplicação - frontend
 
-## Desafio
+Será preciso do angular cli **npm install -g @angular/cli**
 
-Você deverá criar uma aplicação web que consuma a API do [The Movie Database](https://www.themoviedb.org/documentation/api) e exiba os filmes mais populares. A aplicação deverá conter uma página inicial com a listagem dos **filmes populares** e uma página de detalhes do filme. A listagem de filmes deverá conter a imagem do filme, o título e a popularidade. A página de detalhes do filme deverá conter a imagem do filme, o título, a popularidade, a sinopse e a data de lançamento. 
+Coloque isso no terminal **ng add @angular/material** para que seja instalado o angular material
 
-Bônus: A aplicação deverá ser responsiva e deverá conter um campo de busca para que o usuário possa buscar por um filme específico.
+Após isso só rodar um **npm start** no terminal
 
-## Requisitos
+## Como rodar a aplicação - backend
 
-- Frontend: NextJS/ReactJS, VueJS ou outro framework similar.
-- Backend: NodeJS, Python/Django ou outro framework similar.
-- Biblioteca de estilos: TailwindCSS, Bootstrap, Vuetify ou outra similar.
-- Utilização de boas práticas de desenvolvimento de software.
-- Atualizar esse README.md com as instruções para rodar a aplicação.
+Será preciso ter instalado e configurado na variaveis de ambiente o **Java 21** [Link](https://www.oracle.com/br/java/technologies/downloads/)
 
-## Instruções
+Também será preciso ter o **Maven** intalado e configurado [link](https://maven.apache.org/download.cgi)
 
-- Faça um fork desse repositório e crie uma branch com o seu nome.
-- Após finalizar o desafio, crie um pull request para o repositório original.
-- Envie um e-mail para [fabricio.bizotto@ifc.edu.br](mailto:fabricio.bizotto@ifc.edu.br) com o link do seu pull request.
+Preencha as informações com a **chave da api** e o **token** no arquivo **aplication.properties**
 
-## Entrega
+Após isso se estiver usando **VsCode** utilize a extensão **Debugger for java** para rodar a aplicação
 
-- O prazo para entrega do desafio é **10/03/2024**.
-
-## Dúvidas
-
- - Em caso de dúvidas, envie um e-mail para [fabricio.bizotto@ifc.edu.br](mailto:fabricio.bizotto@ifc.edu.br).
- - Vale lembrar que o objetivo do desafio é avaliar suas habilidades em desenvolvimento de software, então não hesite em perguntar caso tenha alguma dúvida.

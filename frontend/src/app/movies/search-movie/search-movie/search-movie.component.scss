@@ -1,0 +1,11 @@
+.search-field{
+  width: 30%;
+  margin: 2em auto;
+  display: flex;
+}
+
+@media(max-width: 755px){
+  .search-field{
+    width: 100%;
+  }
+}
