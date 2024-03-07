@@ -1,4 +1,4 @@
-import React, {/*useEffect, useState,*/ Component} from 'react';
+import React, {useEffect, useState, Component} from 'react';
 import './App.css';
 
 const App = () =>{
@@ -33,34 +33,34 @@ class Header extends Component
 
 class Content extends Component
 {
-  generateCard(props) 
-  {
-    return(
-      <a href="#" className="card" style={{width: "18rem"}}>
-        <img src="{props.img}" className="card-img-top" alt='img'/>
-        <div className="card-body">
-          <h5 className="card-title">{props.name}</h5>
-          <p className="card-text">{props.popularity}/10</p>
-        </div>
-      </a>
-    )
-  }
 
-  generateCards(props)
+  generateCards()
   {
-    let grup = []
-    for (let i = 0; i < 10; i++) 
-    {
-      grup.push(
-        <a href="#" className="card m-3" style={{width: "18rem"}}>
-        <img src="{props.img}" className="card-img-top" alt='img'/>
-        <div className="card-body">
-          <h5 className="card-title">{props.name}</h5>
-          <p className="card-text">{props.popularity}/10</p>
-        </div>
-      </a>
-        )
-    }
+    const grup = []
+    const apidb = GetApi()
+    console.log(apidb)
+    grup.push(
+      <>
+        {(apidb == null)?(
+          <>
+            null
+          </>
+          ):(
+            <>
+            {apidb?.map((title, i) => {
+            <a href='{apidb[i].id}' className="card m-3" style={{width: "18rem"}}>
+              <img src={'#'} className="card-img-top" alt='img'/>
+              <div className="card-body">
+                <h5  key={i} className="card-title">{title}</h5>
+                <p className="card-text">{}/10</p>
+              </div>
+            </a>
+            })}
+            </>
+          )
+        }
+      </>
+    )
     return grup
   }
 
@@ -69,7 +69,7 @@ class Content extends Component
     return (
       <main className="d-flex flex-wrap justify-content-between align-items-start container-fluid col-11 m-5" style={{minHeight: "75vh"}}>
         <>
-          <this.generateCards  name={'same name'} popularity={'5'} img={''}/>
+          <this.generateCards/>
         </>
       </main>
     )
@@ -90,31 +90,19 @@ class Footer extends Component
 export default App;
 
 
-// function App() 
-// {
-//   const [backendData, setBackendData] = useState([{}])
+function GetApi() 
+{
+  const [backendData, setBackendData] = useState([{}])
 
-//   useEffect( 
-//     ()=> {
-//       fetch("/api").then(
-//         Response => Response.json()
-//       ).then(
-//         data => {
-//           setBackendData(data)
-//         }
-//       )
-//     }, [])
-
-//     return (
-//       <div>
-//       {(typeof backendData.users === 'undefined') ? (
-//           <p>Loading...</p>
-//         ): (
-//           backendData.users.map((user, i) =>(
-//             <p key={i} className='p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3'>{user}</p>
-//           ))
-//         )
-//       }
-//     </div>
-//     ); 
-// }
+  useEffect( 
+    ()=> {
+      fetch("/api").then(
+        Response => Response.json()
+      ).then(
+        data => {
+          setBackendData(data)
+        }
+      )
+    }, [])
+    return backendData
+}
