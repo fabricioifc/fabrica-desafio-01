@@ -23,7 +23,7 @@ class Header extends Component
       <header>
         <nav className="navbar bg-info">
           <div className="container-fluid col-10">
-            <a href='#' className="navbar-brand">Navbar</a>
+            <a href='/' className="navbar-brand">Navbar</a>
             <form className="d-flex" role="search">
               <input name="search" type="search" className="form-control me-2" placeholder="Search" aria-label="Search"/>
               <button className="btn btn-outline-light" type="submit">Search</button>
@@ -62,7 +62,7 @@ class Details extends Component{
         grup.push(
           <>
             <div className="d-flex col-12 justify-content-center align-items-center p-2" >
-              <img src={`https://image.tmdb.org/t/p/w300/${element.poster_path}`} className="col-4" alt='img'/>
+              <img src={`https://image.tmdb.org/t/p/w300/${element.poster_path}`} className="col-3" alt='img'/>
             </div>
             <div className="d-flex flex-wrap justify-content-start col-12 p-3 border-top-2 border-top" style={{height: "100%"}}>
               <h5 className="fw-bolder col-12 p-2" title={title}>{title}</h5>
