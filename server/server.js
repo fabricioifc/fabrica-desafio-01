@@ -15,7 +15,7 @@ APP.listen(PORT, IP, ()=>{
 
 APP.get("/api", async (req, res)=>{
     const data = await fetchMovies()
-    res.json(data)
+    res.json(data.results)
 })
 
 async function fetchMovies()

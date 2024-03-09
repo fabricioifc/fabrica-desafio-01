@@ -38,30 +38,24 @@ class Content extends Component
   {
     const grup = []
     const apidb = GetApi()
-
-    if (apidb.hasOwnProperty("results")) {
-      apidb.result.map((item, i)=>{
-        <>
-        <a href='{}' className="card m-3" style={{width: "18rem"}}>
-          <img src={'#'} className="card-img-top" alt='img'/>
-          <div className="card-body">
-            <h5 key={i} className="card-title">{item.title}</h5>
-            <p className="card-text">{}/10</p>
-          </div>
-        </a>
-      </>
-      })
-      grup.push(
-        <>
-          <a href='{}' className="card m-3" style={{width: "18rem"}}>
-            <img src={'#'} className="card-img-top" alt='img'/>
-            <div className="card-body">
-              <h5 className="card-title">{apidb.result}</h5>
-              <p className="card-text">{}/10</p>
-            </div>
-          </a>
-        </>
-      )
+    //gambiara 
+    //n consegui verificar o formato json estava completo, mas pelo vato de sempre vir com propriedade length isso da certo quando é ao menos 1 item
+    if (apidb.length >= 2) {
+      for (let i = 0; i < apidb.length; i++) {
+        const element = apidb[i];
+        const title = element.title
+        grup.push(
+          <>
+            <a href='{element.id}' className="card m-3 link-underline link-underline-opacity-0 m-3" style={{width: "18rem", height: "20rem"}}>
+              <img src={`https://image.tmdb.org/t/p/w300/${element.backdrop_path}`} className="card-img-top" alt='img'/>
+              <div className="card-body d-flex flex-wrap justify-content-start" style={{height: "100%"}}>
+                <h5 className="fw-bolder card-title align-self-start col-12">{title}</h5>
+                <p className="card-text align-self-end col-12">{element.popularity}⭐</p>
+              </div>
+            </a>
+          </>
+        )
+      }
       return grup
     }else
     {
@@ -76,10 +70,12 @@ class Content extends Component
   render()
   {
     return (
-      <main className="d-flex flex-wrap justify-content-between align-items-start container-fluid col-11 m-5" style={{minHeight: "75vh"}}>
-        <>
-          <this.generateCards/>
-        </>
+      <main className="d-flex flex-wrap justify-content-center align-items-start container-fluid col-12" style={{minHeight: "75vh"}}>
+        <div className='d-flex flex-wrap justify-content-between align-items-start container-fluid col-10'>
+          <>
+            <this.generateCards/>
+          </>
+        </div>
       </main>
     )
   }
