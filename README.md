@@ -30,3 +30,22 @@ Bônus: A aplicação deverá ser responsiva e deverá conter um campo de busca 
 
  - Em caso de dúvidas, envie um e-mail para [fabricio.bizotto@ifc.edu.br](mailto:fabricio.bizotto@ifc.edu.br).
  - Vale lembrar que o objetivo do desafio é avaliar suas habilidades em desenvolvimento de software, então não hesite em perguntar caso tenha alguma dúvida.
+## Como rodar
+Apos o pull
+- Terminal 1:
+- cd server
+- npm i express
+- npm i nodemon -D
+- npm run dev
+
+- Terminal 2:
+
+- cd .\client\
+- npm install
+- npm install react
+- npm audit fix --force
+
+- cd .\myapp\
+- npm audit fix --force
+- npm start
+- //espere abrir em http://localhost:3000 
