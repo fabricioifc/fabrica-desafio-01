@@ -14,6 +14,6 @@ bun dev
 ```
 
 - Mostrando a aplicação:
-<img src="../preview/multi-grid.mp4" alt="prev-1_multi_grid">
+<video src="../preview/multi-grid.mp4" alt="prev-1_multi_grid">
 - UI (Adaptação e responsividade):
-<img src="../preview/ux.mp4" alt="prev-2_ux">
+<video src="../preview/ux.mp4" alt="prev-2_ux">
