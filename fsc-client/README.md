@@ -3,6 +3,7 @@ _Martins, Helder_
 
 Inicie a aplicação.
 
+
 ```bash
 npm run dev
 # ou
@@ -13,7 +14,9 @@ pnpm dev
 bun dev
 ```
 
-- Mostrando a aplicação:
-<video src="../preview/multi-grid.mp4" alt="prev-1_multi_grid">
-- UI (Adaptação e responsividade):
-<video src="../preview/ux.mp4" alt="prev-2_ux">
+### **Mostrando a aplicação:**
+https://github.com/heldermartins4/fabrica-desafio-01/assets/87500661/8729bd0a-3f79-411d-b8e0-fd668f1c04df
+
+### **UI (Adaptação e responsividade):**
+https://github.com/heldermartins4/fabrica-desafio-01/assets/87500661/8104b0d3-6006-4ea5-8333-911717b6c9a2
+
