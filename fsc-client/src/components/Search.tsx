@@ -20,7 +20,7 @@ export function Search() {
     );
 
     return (
-        <div className="relative bg-zinc-700 rounded-md border border-separate border-zinc-600">
+        <div className="relative rounded-md border border-separate border-zinc-600">
             <input
                 type="text"
                 placeholder="'/' ou um tema específico..."

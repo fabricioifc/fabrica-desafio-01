@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "IFC Hub",
+  title: "Início | IFCHub",
   description: "App for IFC Hub",
 };
 
