@@ -36,11 +36,11 @@ export function Nav() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem
-                    className={pathname == "/popular" ? "border-b-2 border-green-500": ""}
+                    className={pathname.split("/")[1] == "popular" ? "border-b-2 border-green-500": ""}
                 >
                     <NavigationMenuTrigger>
-                        <Link href="/popular">
-                            Popular
+                        <Link href="/popular/1">
+                            Populares
                         </Link>
                     </NavigationMenuTrigger>
 
@@ -55,7 +55,7 @@ export function Nav() {
                                                 <p className="text-xs text-gray-300 mt-0.5 mb-1">
                                                     Confira os filmes e séries mais populares do momento!
                                                 </p>
-                                                <Button variant={"secondary"} className="bg-green-500 hover:bg-green-600">Confira a lista!</Button>
+                                                <Link href={`/popular/1`} className="bg-green-500 hover:bg-green-600">Confira a lista!</Link>
                                             </span>
                                         </div>
                                     </div>
@@ -80,10 +80,10 @@ export function Nav() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem
-                    className={pathname == "/top-rated" ? "border-b-2 border-green-500": ""}
+                    className={pathname.split("/")[1] == "top-rated" ? "border-b-2 border-green-500": ""}
                 >
                     <NavigationMenuTrigger>
-                        <Link href="/top-rated">
+                        <Link href="/top-rated/1">
                             Mais votados
                         </Link>
                     </NavigationMenuTrigger>
