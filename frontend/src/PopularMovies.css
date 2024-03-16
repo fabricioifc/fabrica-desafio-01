@@ -1,0 +1,6 @@
+.custom-hover:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  border: 0;
+}
