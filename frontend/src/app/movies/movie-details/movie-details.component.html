@@ -1,0 +1,24 @@
+@if(details){
+  <mat-card class="details-card">
+    <mat-card-header>
+      <mat-toolbar ><span class="details">Detalhes do filme</span></mat-toolbar>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+      <p><strong>Titulo original: </strong>{{ details.original_title }}</p>
+      <p><strong>Sinopse: </strong>{{ details.overview }}</p>
+      <span><strong>Gêneros:</strong></span>
+      <ul>
+        @for(genre of details.genres; track $index){
+          <li>{{ genre.name }}</li>
+        }
+      </ul>
+      <p><strong>Data de lançamento: </strong>{{ details.release_date }}</p>
+      <p><strong>Status: </strong>{{ details.status }}</p>
+      <p><strong>Linguagem original: </strong>{{ details.original_language }}</p>
+      <p><strong>Avaliação: </strong>{{ details.vote_average }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="onBack()" mat-raised-button>Voltar</button>
+    </mat-card-actions>
+  </mat-card>
+}
