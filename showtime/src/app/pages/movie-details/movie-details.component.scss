@@ -1,0 +1,31 @@
+img{
+    width: 100%;
+    height: auto;
+}
+
+.poster-image img {
+    max-height: 700px;
+    object-fit: cover;
+}
+
+h1
+{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+p{
+    color: #ffffff;
+}
+
+a{
+    background-color: #E50914;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: #E50914;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}

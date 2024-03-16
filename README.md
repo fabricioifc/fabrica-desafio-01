@@ -30,3 +30,31 @@ Bônus: A aplicação deverá ser responsiva e deverá conter um campo de busca 
 
  - Em caso de dúvidas, envie um e-mail para [fabricio.bizotto@ifc.edu.br](mailto:fabricio.bizotto@ifc.edu.br).
  - Vale lembrar que o objetivo do desafio é avaliar suas habilidades em desenvolvimento de software, então não hesite em perguntar caso tenha alguma dúvida.
+
+## Como rodar a aplicação
+Instale as seguintes ferramentas: 
+
+- Angular CLI: 14.2.13
+- Node.js: 20.11.1 
+- npm: 10.2.4
+
+
+1. **Clone o repositório:**
+
+ - git clone <URL_do_repositório>
+
+2. **Navegue até o diretório do projeto:**
+   
+ - cd diretório_do_projeto
+
+3. **Instale as dependências:**
+
+ - npm install
+
+4. **Execute o aplicativo:**
+
+ - ng serve
+
+5. **Visualize o aplicativo no navegador:**
+
+ - Abra seu navegador e acesse http://localhost:4200/
